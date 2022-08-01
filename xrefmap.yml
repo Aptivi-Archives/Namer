@@ -1,0 +1,53 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Namer
+  name: Namer
+  href: api/Namer.html
+  commentId: N:Namer
+  fullName: Namer
+  nameWithType: Namer
+- uid: Namer.NameGenerator
+  name: NameGenerator
+  href: api/Namer.NameGenerator.html
+  commentId: T:Namer.NameGenerator
+  fullName: Namer.NameGenerator
+  nameWithType: NameGenerator
+- uid: Namer.NameGenerator.GenerateNames
+  name: GenerateNames()
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames
+  commentId: M:Namer.NameGenerator.GenerateNames
+  fullName: Namer.NameGenerator.GenerateNames()
+  nameWithType: NameGenerator.GenerateNames()
+- uid: Namer.NameGenerator.GenerateNames(System.Int32)
+  name: GenerateNames(Int32)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_System_Int32_
+  commentId: M:Namer.NameGenerator.GenerateNames(System.Int32)
+  fullName: Namer.NameGenerator.GenerateNames(System.Int32)
+  nameWithType: NameGenerator.GenerateNames(Int32)
+- uid: Namer.NameGenerator.GenerateNames(System.Int32,System.String,System.String,System.String,System.String)
+  name: GenerateNames(Int32, String, String, String, String)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_System_Int32_System_String_System_String_System_String_System_String_
+  commentId: M:Namer.NameGenerator.GenerateNames(System.Int32,System.String,System.String,System.String,System.String)
+  fullName: Namer.NameGenerator.GenerateNames(System.Int32, System.String, System.String, System.String, System.String)
+  nameWithType: NameGenerator.GenerateNames(Int32, String, String, String, String)
+- uid: Namer.NameGenerator.GenerateNames*
+  name: GenerateNames
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_
+  commentId: Overload:Namer.NameGenerator.GenerateNames
+  isSpec: "True"
+  fullName: Namer.NameGenerator.GenerateNames
+  nameWithType: NameGenerator.GenerateNames
+- uid: Namer.NameGenerator.PopulateNames
+  name: PopulateNames()
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNames
+  commentId: M:Namer.NameGenerator.PopulateNames
+  fullName: Namer.NameGenerator.PopulateNames()
+  nameWithType: NameGenerator.PopulateNames()
+- uid: Namer.NameGenerator.PopulateNames*
+  name: PopulateNames
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNames_
+  commentId: Overload:Namer.NameGenerator.PopulateNames
+  isSpec: "True"
+  fullName: Namer.NameGenerator.PopulateNames
+  nameWithType: NameGenerator.PopulateNames
