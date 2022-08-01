@@ -17,7 +17,12 @@
     <PackageTags>name;generator;csharp</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <ApplicationIcon>OfficialAppIcon-Namer.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="OfficialAppIcon-Namer.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\README.md">
