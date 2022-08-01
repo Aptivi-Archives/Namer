@@ -100,6 +100,9 @@ namespace Namer
 			Random RandomDriver = new Random();
 			List<string> NamesList = new List<string>();
 
+			// Initialize names
+			PopulateNames();
+
 			// Check if the prefix and suffix check is required
 			bool NamePrefixCheckRequired = !string.IsNullOrEmpty(NamePrefix);
 			bool NameSuffixCheckRequired = !string.IsNullOrEmpty(NameSuffix);
@@ -123,9 +126,6 @@ namespace Namer
 				ProcessedSurnames = Surnames.Where((str) => str.StartsWith(SurnamePrefix)).ToArray();
 			else if (NameSuffixCheckRequired)
 				ProcessedSurnames = Surnames.Where((str) => str.EndsWith(SurnameSuffix)).ToArray();
-
-			// Initialize names
-			PopulateNames();
 
 			// Select random names
 			for (int NameNum = 1; NameNum <= Count; NameNum++)
