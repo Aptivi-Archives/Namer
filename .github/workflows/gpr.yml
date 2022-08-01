@@ -22,11 +22,11 @@ jobs:
     - name: MSBuild Installation
       uses: microsoft/setup-msbuild@v1.0.2
     - name: Dependency Restoration
-      run: nuget restore "VisualCard.sln"
+      run: nuget restore "Namer.sln"
     - name: Solution Compilation
-      run: msbuild "VisualCard.sln" /p:Configuration=Release
+      run: msbuild "Namer.sln" /p:Configuration=Release
     - name: Package Publication
       run: |
-        $path = "VisualCard\bin\Release"
-        $FileName = Get-ChildItem -Path $path -Name -Filter "VisualCard.*"
+        $path = "Namer\bin\Release"
+        $FileName = Get-ChildItem -Path $path -Name -Filter "Namer.*"
         curl -vX PUT -u "EoflaOE:${{ secrets.G_APIKEY }}" -F package="@$path\$FileName" https://nuget.pkg.github.com/EoflaOE/
