@@ -7,7 +7,7 @@ dotnet_csproj:
   package_version: 1.0.0.0-build{build}
 environment:
   WEBHOOK_URL:
-    secure: p3nnkhnWtqFFH8UJ1eaKFfRjFPlOVhNtmLjd94R7+KQ4eyjsBYCf7C36G7crjftVX4N7Ej87HCddOFzH32E6mMyJSr0qUm7vyhjjCOuTFzsdDXpoOwyiCEOYi587y1ZqCny6bUePYdyVQEA+fB0UyGmDy/A8tPrGvCVJiF4Kp7A=
+    secure: p3nnkhnWtqFFH8UJ1eaKFfRjFPlOVhNtmLjd94R7+KTpkKNbysGuec/79VzLBNYG4fP/ep8I026CFaMaFFQ6TMAxewnekvMojyHY4YGeOQcwDRwmdBNzygAllTwNsND3ThcpJYljaBoYT9gbSigZESCgktjtl0Uc1lUhQCAQdOM=
 before_build:
 - cmd: nuget restore "%APPVEYOR_BUILD_FOLDER%\Namer.sln"
 build:
