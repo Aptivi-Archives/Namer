@@ -127,6 +127,12 @@ namespace Namer
 			else if (NameSuffixCheckRequired)
 				ProcessedSurnames = Surnames.Where((str) => str.EndsWith(SurnameSuffix)).ToArray();
 
+			// Check the names and the surnames
+			if (ProcessedNames.Length == 0)
+				throw new Exception("The names are not found! Please ensure that the name conditions are correct.");
+			if (ProcessedSurnames.Length == 0)
+				throw new Exception("The surnames are not found! Please ensure that the surname conditions are correct.");
+
 			// Select random names
 			for (int NameNum = 1; NameNum <= Count; NameNum++)
 			{
