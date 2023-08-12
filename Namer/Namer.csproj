@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Net.Http" Version="4.3.4" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="OfficialAppIcon-Namer-512.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
