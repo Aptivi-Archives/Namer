@@ -38,6 +38,31 @@ references:
   isSpec: "True"
   fullName: Namer.NameGenerator.GenerateNames
   nameWithType: NameGenerator.GenerateNames
+- uid: Namer.NameGenerator.GenerateNamesAsync
+  name: GenerateNamesAsync()
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync
+  commentId: M:Namer.NameGenerator.GenerateNamesAsync
+  fullName: Namer.NameGenerator.GenerateNamesAsync()
+  nameWithType: NameGenerator.GenerateNamesAsync()
+- uid: Namer.NameGenerator.GenerateNamesAsync(System.Int32)
+  name: GenerateNamesAsync(Int32)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_System_Int32_
+  commentId: M:Namer.NameGenerator.GenerateNamesAsync(System.Int32)
+  fullName: Namer.NameGenerator.GenerateNamesAsync(System.Int32)
+  nameWithType: NameGenerator.GenerateNamesAsync(Int32)
+- uid: Namer.NameGenerator.GenerateNamesAsync(System.Int32,System.String,System.String,System.String,System.String)
+  name: GenerateNamesAsync(Int32, String, String, String, String)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_System_Int32_System_String_System_String_System_String_System_String_
+  commentId: M:Namer.NameGenerator.GenerateNamesAsync(System.Int32,System.String,System.String,System.String,System.String)
+  fullName: Namer.NameGenerator.GenerateNamesAsync(System.Int32, System.String, System.String, System.String, System.String)
+  nameWithType: NameGenerator.GenerateNamesAsync(Int32, String, String, String, String)
+- uid: Namer.NameGenerator.GenerateNamesAsync*
+  name: GenerateNamesAsync
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_
+  commentId: Overload:Namer.NameGenerator.GenerateNamesAsync
+  isSpec: "True"
+  fullName: Namer.NameGenerator.GenerateNamesAsync
+  nameWithType: NameGenerator.GenerateNamesAsync
 - uid: Namer.NameGenerator.PopulateNames
   name: PopulateNames()
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNames
@@ -51,3 +76,16 @@ references:
   isSpec: "True"
   fullName: Namer.NameGenerator.PopulateNames
   nameWithType: NameGenerator.PopulateNames
+- uid: Namer.NameGenerator.PopulateNamesAsync
+  name: PopulateNamesAsync()
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNamesAsync
+  commentId: M:Namer.NameGenerator.PopulateNamesAsync
+  fullName: Namer.NameGenerator.PopulateNamesAsync()
+  nameWithType: NameGenerator.PopulateNamesAsync()
+- uid: Namer.NameGenerator.PopulateNamesAsync*
+  name: PopulateNamesAsync
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNamesAsync_
+  commentId: Overload:Namer.NameGenerator.PopulateNamesAsync
+  isSpec: "True"
+  fullName: Namer.NameGenerator.PopulateNamesAsync
+  nameWithType: NameGenerator.PopulateNamesAsync
