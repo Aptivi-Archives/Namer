@@ -25,7 +25,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -55,21 +54,9 @@ namespace Namer
             try
             {
                 if (Names.Length == 0)
-                {
-                    HttpResponseMessage Response = await NameClient.GetAsync(nameAddress);
-                    Response.EnsureSuccessStatusCode();
-                    Stream NamesStream = await Response.Content.ReadAsStreamAsync();
-                    string NamesString = new StreamReader(NamesStream).ReadToEnd();
-                    Names = NamesString.SplitNewLines();
-                }
+                    Names = await PopulateInternalAsync(nameAddress);
                 if (Surnames.Length == 0)
-                {
-                    HttpResponseMessage Response = await NameClient.GetAsync(surnameAddress);
-                    Response.EnsureSuccessStatusCode();
-                    Stream SurnamesStream = await Response.Content.ReadAsStreamAsync();
-                    string SurnamesString = new StreamReader(SurnamesStream).ReadToEnd();
-                    Surnames = SurnamesString.SplitNewLines();
-                }
+                    Surnames = await PopulateInternalAsync(surnameAddress);
             }
             catch (Exception ex)
             {
@@ -336,6 +323,15 @@ namespace Namer
                 namesList.Add(GeneratedName + " " + GeneratedSurname);
             }
             return namesList.ToArray();
+        }
+
+        internal static async Task<string[]> PopulateInternalAsync(string nameLink)
+        {
+            HttpResponseMessage Response = await NameClient.GetAsync(nameLink);
+            Response.EnsureSuccessStatusCode();
+            Stream SurnamesStream = await Response.Content.ReadAsStreamAsync();
+            string SurnamesString = new StreamReader(SurnamesStream).ReadToEnd();
+            return SurnamesString.SplitNewLines();
         }
 
         /// <summary>
