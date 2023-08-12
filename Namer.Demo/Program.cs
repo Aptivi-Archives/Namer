@@ -24,7 +24,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 
 namespace Namer.Demo
 {
@@ -34,27 +33,27 @@ namespace Namer.Demo
         {
             // Generate 10 names
             Console.WriteLine("Generate 10 names\n");
-            List<string> names = NameGenerator.GenerateNames();
+            var names = NameGenerator.GenerateNames();
             Console.WriteLine("- {0}\n\n", string.Join(", ", names));
 
             // Generate 20 names
             Console.WriteLine("Generate 20 names\n");
-            List<string> names20 = NameGenerator.GenerateNames(20);
+            var names20 = NameGenerator.GenerateNames(20);
             Console.WriteLine("- {0}\n\n", string.Join(", ", names20));
 
             // Generate 5 names with custom name prefix
             Console.WriteLine("Generate 5 names with custom name prefix\n");
-            List<string> names5nameprefix = NameGenerator.GenerateNames(5, "J", "m", "", "");
+            var names5nameprefix = NameGenerator.GenerateNames(5, "J", "m", "", "");
             Console.WriteLine("- {0}\n\n", string.Join(", ", names5nameprefix));
 
             // Generate 5 names with custom surname prefix
             Console.WriteLine("Generate 5 names with custom surname prefix\n");
-            List<string> names5surnameprefix = NameGenerator.GenerateNames(5, "", "", "B", "g");
+            var names5surnameprefix = NameGenerator.GenerateNames(5, "", "", "B", "g");
             Console.WriteLine("- {0}\n\n", string.Join(", ", names5surnameprefix));
 
             // Generate 5 names with custom name and surname prefix
             Console.WriteLine("Generate 5 names with custom name and surname prefix\n");
-            List<string> namescomplete = NameGenerator.GenerateNames(5, "Ev", "n", "Na", "lo");
+            var namescomplete = NameGenerator.GenerateNames(5, "Ev", "n", "Na", "lo");
             Console.WriteLine("- {0}\n\n", string.Join(", ", namescomplete));
         }
     }
