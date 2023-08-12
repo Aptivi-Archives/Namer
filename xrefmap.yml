@@ -13,6 +13,106 @@ references:
   commentId: T:Namer.NameGenerator
   fullName: Namer.NameGenerator
   nameWithType: NameGenerator
+- uid: Namer.NameGenerator.GenerateFirstNames
+  name: GenerateFirstNames()
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames
+  commentId: M:Namer.NameGenerator.GenerateFirstNames
+  fullName: Namer.NameGenerator.GenerateFirstNames()
+  nameWithType: NameGenerator.GenerateFirstNames()
+- uid: Namer.NameGenerator.GenerateFirstNames(System.Int32)
+  name: GenerateFirstNames(Int32)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_System_Int32_
+  commentId: M:Namer.NameGenerator.GenerateFirstNames(System.Int32)
+  fullName: Namer.NameGenerator.GenerateFirstNames(System.Int32)
+  nameWithType: NameGenerator.GenerateFirstNames(Int32)
+- uid: Namer.NameGenerator.GenerateFirstNames(System.Int32,System.String,System.String)
+  name: GenerateFirstNames(Int32, String, String)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_System_Int32_System_String_System_String_
+  commentId: M:Namer.NameGenerator.GenerateFirstNames(System.Int32,System.String,System.String)
+  fullName: Namer.NameGenerator.GenerateFirstNames(System.Int32, System.String, System.String)
+  nameWithType: NameGenerator.GenerateFirstNames(Int32, String, String)
+- uid: Namer.NameGenerator.GenerateFirstNames*
+  name: GenerateFirstNames
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_
+  commentId: Overload:Namer.NameGenerator.GenerateFirstNames
+  isSpec: "True"
+  fullName: Namer.NameGenerator.GenerateFirstNames
+  nameWithType: NameGenerator.GenerateFirstNames
+- uid: Namer.NameGenerator.GenerateFirstNamesAsync
+  name: GenerateFirstNamesAsync()
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync
+  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync
+  fullName: Namer.NameGenerator.GenerateFirstNamesAsync()
+  nameWithType: NameGenerator.GenerateFirstNamesAsync()
+- uid: Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32)
+  name: GenerateFirstNamesAsync(Int32)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_System_Int32_
+  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32)
+  fullName: Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32)
+  nameWithType: NameGenerator.GenerateFirstNamesAsync(Int32)
+- uid: Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32,System.String,System.String)
+  name: GenerateFirstNamesAsync(Int32, String, String)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_System_Int32_System_String_System_String_
+  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32,System.String,System.String)
+  fullName: Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32, System.String, System.String)
+  nameWithType: NameGenerator.GenerateFirstNamesAsync(Int32, String, String)
+- uid: Namer.NameGenerator.GenerateFirstNamesAsync*
+  name: GenerateFirstNamesAsync
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_
+  commentId: Overload:Namer.NameGenerator.GenerateFirstNamesAsync
+  isSpec: "True"
+  fullName: Namer.NameGenerator.GenerateFirstNamesAsync
+  nameWithType: NameGenerator.GenerateFirstNamesAsync
+- uid: Namer.NameGenerator.GenerateLastNames
+  name: GenerateLastNames()
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateLastNames
+  commentId: M:Namer.NameGenerator.GenerateLastNames
+  fullName: Namer.NameGenerator.GenerateLastNames()
+  nameWithType: NameGenerator.GenerateLastNames()
+- uid: Namer.NameGenerator.GenerateLastNames(System.Int32)
+  name: GenerateLastNames(Int32)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateLastNames_System_Int32_
+  commentId: M:Namer.NameGenerator.GenerateLastNames(System.Int32)
+  fullName: Namer.NameGenerator.GenerateLastNames(System.Int32)
+  nameWithType: NameGenerator.GenerateLastNames(Int32)
+- uid: Namer.NameGenerator.GenerateLastNames(System.Int32,System.String,System.String)
+  name: GenerateLastNames(Int32, String, String)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateLastNames_System_Int32_System_String_System_String_
+  commentId: M:Namer.NameGenerator.GenerateLastNames(System.Int32,System.String,System.String)
+  fullName: Namer.NameGenerator.GenerateLastNames(System.Int32, System.String, System.String)
+  nameWithType: NameGenerator.GenerateLastNames(Int32, String, String)
+- uid: Namer.NameGenerator.GenerateLastNames*
+  name: GenerateLastNames
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateLastNames_
+  commentId: Overload:Namer.NameGenerator.GenerateLastNames
+  isSpec: "True"
+  fullName: Namer.NameGenerator.GenerateLastNames
+  nameWithType: NameGenerator.GenerateLastNames
+- uid: Namer.NameGenerator.GenerateLastNamesAsync
+  name: GenerateLastNamesAsync()
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateLastNamesAsync
+  commentId: M:Namer.NameGenerator.GenerateLastNamesAsync
+  fullName: Namer.NameGenerator.GenerateLastNamesAsync()
+  nameWithType: NameGenerator.GenerateLastNamesAsync()
+- uid: Namer.NameGenerator.GenerateLastNamesAsync(System.Int32)
+  name: GenerateLastNamesAsync(Int32)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateLastNamesAsync_System_Int32_
+  commentId: M:Namer.NameGenerator.GenerateLastNamesAsync(System.Int32)
+  fullName: Namer.NameGenerator.GenerateLastNamesAsync(System.Int32)
+  nameWithType: NameGenerator.GenerateLastNamesAsync(Int32)
+- uid: Namer.NameGenerator.GenerateLastNamesAsync(System.Int32,System.String,System.String)
+  name: GenerateLastNamesAsync(Int32, String, String)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateLastNamesAsync_System_Int32_System_String_System_String_
+  commentId: M:Namer.NameGenerator.GenerateLastNamesAsync(System.Int32,System.String,System.String)
+  fullName: Namer.NameGenerator.GenerateLastNamesAsync(System.Int32, System.String, System.String)
+  nameWithType: NameGenerator.GenerateLastNamesAsync(Int32, String, String)
+- uid: Namer.NameGenerator.GenerateLastNamesAsync*
+  name: GenerateLastNamesAsync
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateLastNamesAsync_
+  commentId: Overload:Namer.NameGenerator.GenerateLastNamesAsync
+  isSpec: "True"
+  fullName: Namer.NameGenerator.GenerateLastNamesAsync
+  nameWithType: NameGenerator.GenerateLastNamesAsync
 - uid: Namer.NameGenerator.GenerateNames
   name: GenerateNames()
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames
