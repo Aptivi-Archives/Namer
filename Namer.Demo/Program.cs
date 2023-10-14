@@ -49,7 +49,7 @@ namespace Namer.Demo
 
                 // Generate 5 names with custom name prefix
                 Console.WriteLine("Generate 5 names with custom name prefix\n");
-                var names5nameprefix = NameGenerator.GenerateNames(5, "J", "m", "", "", genderType);
+                var names5nameprefix = NameGenerator.GenerateNames(5, "J", "n", "", "", genderType);
                 Console.WriteLine("- {0}\n", string.Join(", ", names5nameprefix));
 
                 // Generate 5 names with custom surname prefix

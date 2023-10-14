@@ -39,6 +39,7 @@ namespace Namer
     {
 		internal static string[] Names = Array.Empty<string>();
 		internal static string[] Surnames = Array.Empty<string>();
+        private static NameGenderType lastGenderType = NameGenderType.Unified;
 		private static readonly HttpClient NameClient = new();
         private static readonly string nameAddressPart = "https://cdn.jsdelivr.net/gh/Aptivi/NamesList@latest/Processed/";
         private static readonly string unifiedNameListFileName = "FirstNames.txt";
@@ -68,10 +69,11 @@ namespace Namer
                     unifiedNameListFileName;
                 string nameAddress = $"{nameAddressPart}{namesFileName}";
 
-                if (Names.Length == 0)
+                if (Names.Length == 0 || genderType != lastGenderType)
                     Names = await PopulateInternalAsync(nameAddress);
                 if (Surnames.Length == 0)
                     Surnames = await PopulateInternalAsync(surnameAddress);
+                lastGenderType = genderType;
             }
             catch (Exception ex)
             {
