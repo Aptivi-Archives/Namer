@@ -32,6 +32,9 @@ using System.Threading.Tasks;
 
 namespace Namer
 {
+    /// <summary>
+    /// Name generator class
+    /// </summary>
 	public static class NameGenerator
     {
 		internal static string[] Names = Array.Empty<string>();
