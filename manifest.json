@@ -16,6 +16,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Namer.NameGenderType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Namer.NameGenderType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Namer.NameGenerator.yml",
       "output": {
         ".html": {

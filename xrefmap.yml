@@ -7,36 +7,60 @@ references:
   commentId: N:Namer
   fullName: Namer
   nameWithType: Namer
+- uid: Namer.NameGenderType
+  name: NameGenderType
+  href: api/Namer.NameGenderType.html
+  commentId: T:Namer.NameGenderType
+  fullName: Namer.NameGenderType
+  nameWithType: NameGenderType
+- uid: Namer.NameGenderType.Female
+  name: Female
+  href: api/Namer.NameGenderType.html#Namer_NameGenderType_Female
+  commentId: F:Namer.NameGenderType.Female
+  fullName: Namer.NameGenderType.Female
+  nameWithType: NameGenderType.Female
+- uid: Namer.NameGenderType.Male
+  name: Male
+  href: api/Namer.NameGenderType.html#Namer_NameGenderType_Male
+  commentId: F:Namer.NameGenderType.Male
+  fullName: Namer.NameGenderType.Male
+  nameWithType: NameGenderType.Male
+- uid: Namer.NameGenderType.Unified
+  name: Unified
+  href: api/Namer.NameGenderType.html#Namer_NameGenderType_Unified
+  commentId: F:Namer.NameGenderType.Unified
+  fullName: Namer.NameGenderType.Unified
+  nameWithType: NameGenderType.Unified
 - uid: Namer.NameGenerator
   name: NameGenerator
   href: api/Namer.NameGenerator.html
   commentId: T:Namer.NameGenerator
   fullName: Namer.NameGenerator
   nameWithType: NameGenerator
-- uid: Namer.NameGenerator.GenerateFirstNames
-  name: GenerateFirstNames()
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames
-  commentId: M:Namer.NameGenerator.GenerateFirstNames
-  fullName: Namer.NameGenerator.GenerateFirstNames()
-  nameWithType: NameGenerator.GenerateFirstNames()
-- uid: Namer.NameGenerator.GenerateFirstNames(System.Int32)
-  name: GenerateFirstNames(int)
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_System_Int32_
-  commentId: M:Namer.NameGenerator.GenerateFirstNames(System.Int32)
-  name.vb: GenerateFirstNames(Integer)
-  fullName: Namer.NameGenerator.GenerateFirstNames(int)
-  fullName.vb: Namer.NameGenerator.GenerateFirstNames(Integer)
-  nameWithType: NameGenerator.GenerateFirstNames(int)
-  nameWithType.vb: NameGenerator.GenerateFirstNames(Integer)
-- uid: Namer.NameGenerator.GenerateFirstNames(System.Int32,System.String,System.String)
-  name: GenerateFirstNames(int, string, string)
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_System_Int32_System_String_System_String_
-  commentId: M:Namer.NameGenerator.GenerateFirstNames(System.Int32,System.String,System.String)
-  name.vb: GenerateFirstNames(Integer, String, String)
-  fullName: Namer.NameGenerator.GenerateFirstNames(int, string, string)
-  fullName.vb: Namer.NameGenerator.GenerateFirstNames(Integer, String, String)
-  nameWithType: NameGenerator.GenerateFirstNames(int, string, string)
-  nameWithType.vb: NameGenerator.GenerateFirstNames(Integer, String, String)
+- uid: Namer.NameGenerator.GenerateFirstNames(Namer.NameGenderType)
+  name: GenerateFirstNames(NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateFirstNames(Namer.NameGenderType)
+  fullName: Namer.NameGenerator.GenerateFirstNames(Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNames(NameGenderType)
+- uid: Namer.NameGenerator.GenerateFirstNames(System.Int32,Namer.NameGenderType)
+  name: GenerateFirstNames(int, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_System_Int32_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateFirstNames(System.Int32,Namer.NameGenderType)
+  name.vb: GenerateFirstNames(Integer, NameGenderType)
+  fullName: Namer.NameGenerator.GenerateFirstNames(int, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.GenerateFirstNames(Integer, Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNames(int, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateFirstNames(Integer, NameGenderType)
+- uid: Namer.NameGenerator.GenerateFirstNames(System.Int32,System.String,System.String,Namer.NameGenderType)
+  name: GenerateFirstNames(int, string, string, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_System_Int32_System_String_System_String_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateFirstNames(System.Int32,System.String,System.String,Namer.NameGenderType)
+  name.vb: GenerateFirstNames(Integer, String, String, NameGenderType)
+  fullName: Namer.NameGenerator.GenerateFirstNames(int, string, string, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.GenerateFirstNames(Integer, String, String, Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNames(int, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateFirstNames(Integer, String, String, NameGenderType)
 - uid: Namer.NameGenerator.GenerateFirstNames*
   name: GenerateFirstNames
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_
@@ -44,30 +68,30 @@ references:
   isSpec: "True"
   fullName: Namer.NameGenerator.GenerateFirstNames
   nameWithType: NameGenerator.GenerateFirstNames
-- uid: Namer.NameGenerator.GenerateFirstNamesAsync
-  name: GenerateFirstNamesAsync()
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync
-  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync
-  fullName: Namer.NameGenerator.GenerateFirstNamesAsync()
-  nameWithType: NameGenerator.GenerateFirstNamesAsync()
-- uid: Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32)
-  name: GenerateFirstNamesAsync(int)
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_System_Int32_
-  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32)
-  name.vb: GenerateFirstNamesAsync(Integer)
-  fullName: Namer.NameGenerator.GenerateFirstNamesAsync(int)
-  fullName.vb: Namer.NameGenerator.GenerateFirstNamesAsync(Integer)
-  nameWithType: NameGenerator.GenerateFirstNamesAsync(int)
-  nameWithType.vb: NameGenerator.GenerateFirstNamesAsync(Integer)
-- uid: Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32,System.String,System.String)
-  name: GenerateFirstNamesAsync(int, string, string)
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_System_Int32_System_String_System_String_
-  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32,System.String,System.String)
-  name.vb: GenerateFirstNamesAsync(Integer, String, String)
-  fullName: Namer.NameGenerator.GenerateFirstNamesAsync(int, string, string)
-  fullName.vb: Namer.NameGenerator.GenerateFirstNamesAsync(Integer, String, String)
-  nameWithType: NameGenerator.GenerateFirstNamesAsync(int, string, string)
-  nameWithType.vb: NameGenerator.GenerateFirstNamesAsync(Integer, String, String)
+- uid: Namer.NameGenerator.GenerateFirstNamesAsync(Namer.NameGenderType)
+  name: GenerateFirstNamesAsync(NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync(Namer.NameGenderType)
+  fullName: Namer.NameGenerator.GenerateFirstNamesAsync(Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNamesAsync(NameGenderType)
+- uid: Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32,Namer.NameGenderType)
+  name: GenerateFirstNamesAsync(int, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_System_Int32_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32,Namer.NameGenderType)
+  name.vb: GenerateFirstNamesAsync(Integer, NameGenderType)
+  fullName: Namer.NameGenerator.GenerateFirstNamesAsync(int, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.GenerateFirstNamesAsync(Integer, Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNamesAsync(int, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateFirstNamesAsync(Integer, NameGenderType)
+- uid: Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32,System.String,System.String,Namer.NameGenderType)
+  name: GenerateFirstNamesAsync(int, string, string, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_System_Int32_System_String_System_String_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateFirstNamesAsync(System.Int32,System.String,System.String,Namer.NameGenderType)
+  name.vb: GenerateFirstNamesAsync(Integer, String, String, NameGenderType)
+  fullName: Namer.NameGenerator.GenerateFirstNamesAsync(int, string, string, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.GenerateFirstNamesAsync(Integer, String, String, Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateFirstNamesAsync(int, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateFirstNamesAsync(Integer, String, String, NameGenderType)
 - uid: Namer.NameGenerator.GenerateFirstNamesAsync*
   name: GenerateFirstNamesAsync
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNamesAsync_
@@ -137,30 +161,30 @@ references:
   isSpec: "True"
   fullName: Namer.NameGenerator.GenerateLastNamesAsync
   nameWithType: NameGenerator.GenerateLastNamesAsync
-- uid: Namer.NameGenerator.GenerateNames
-  name: GenerateNames()
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames
-  commentId: M:Namer.NameGenerator.GenerateNames
-  fullName: Namer.NameGenerator.GenerateNames()
-  nameWithType: NameGenerator.GenerateNames()
-- uid: Namer.NameGenerator.GenerateNames(System.Int32)
-  name: GenerateNames(int)
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_System_Int32_
-  commentId: M:Namer.NameGenerator.GenerateNames(System.Int32)
-  name.vb: GenerateNames(Integer)
-  fullName: Namer.NameGenerator.GenerateNames(int)
-  fullName.vb: Namer.NameGenerator.GenerateNames(Integer)
-  nameWithType: NameGenerator.GenerateNames(int)
-  nameWithType.vb: NameGenerator.GenerateNames(Integer)
-- uid: Namer.NameGenerator.GenerateNames(System.Int32,System.String,System.String,System.String,System.String)
-  name: GenerateNames(int, string, string, string, string)
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_System_Int32_System_String_System_String_System_String_System_String_
-  commentId: M:Namer.NameGenerator.GenerateNames(System.Int32,System.String,System.String,System.String,System.String)
-  name.vb: GenerateNames(Integer, String, String, String, String)
-  fullName: Namer.NameGenerator.GenerateNames(int, string, string, string, string)
-  fullName.vb: Namer.NameGenerator.GenerateNames(Integer, String, String, String, String)
-  nameWithType: NameGenerator.GenerateNames(int, string, string, string, string)
-  nameWithType.vb: NameGenerator.GenerateNames(Integer, String, String, String, String)
+- uid: Namer.NameGenerator.GenerateNames(Namer.NameGenderType)
+  name: GenerateNames(NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateNames(Namer.NameGenderType)
+  fullName: Namer.NameGenerator.GenerateNames(Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateNames(NameGenderType)
+- uid: Namer.NameGenerator.GenerateNames(System.Int32,Namer.NameGenderType)
+  name: GenerateNames(int, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_System_Int32_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateNames(System.Int32,Namer.NameGenderType)
+  name.vb: GenerateNames(Integer, NameGenderType)
+  fullName: Namer.NameGenerator.GenerateNames(int, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.GenerateNames(Integer, Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateNames(int, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateNames(Integer, NameGenderType)
+- uid: Namer.NameGenerator.GenerateNames(System.Int32,System.String,System.String,System.String,System.String,Namer.NameGenderType)
+  name: GenerateNames(int, string, string, string, string, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_System_Int32_System_String_System_String_System_String_System_String_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateNames(System.Int32,System.String,System.String,System.String,System.String,Namer.NameGenderType)
+  name.vb: GenerateNames(Integer, String, String, String, String, NameGenderType)
+  fullName: Namer.NameGenerator.GenerateNames(int, string, string, string, string, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.GenerateNames(Integer, String, String, String, String, Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateNames(int, string, string, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateNames(Integer, String, String, String, String, NameGenderType)
 - uid: Namer.NameGenerator.GenerateNames*
   name: GenerateNames
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNames_
@@ -168,30 +192,30 @@ references:
   isSpec: "True"
   fullName: Namer.NameGenerator.GenerateNames
   nameWithType: NameGenerator.GenerateNames
-- uid: Namer.NameGenerator.GenerateNamesAsync
-  name: GenerateNamesAsync()
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync
-  commentId: M:Namer.NameGenerator.GenerateNamesAsync
-  fullName: Namer.NameGenerator.GenerateNamesAsync()
-  nameWithType: NameGenerator.GenerateNamesAsync()
-- uid: Namer.NameGenerator.GenerateNamesAsync(System.Int32)
-  name: GenerateNamesAsync(int)
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_System_Int32_
-  commentId: M:Namer.NameGenerator.GenerateNamesAsync(System.Int32)
-  name.vb: GenerateNamesAsync(Integer)
-  fullName: Namer.NameGenerator.GenerateNamesAsync(int)
-  fullName.vb: Namer.NameGenerator.GenerateNamesAsync(Integer)
-  nameWithType: NameGenerator.GenerateNamesAsync(int)
-  nameWithType.vb: NameGenerator.GenerateNamesAsync(Integer)
-- uid: Namer.NameGenerator.GenerateNamesAsync(System.Int32,System.String,System.String,System.String,System.String)
-  name: GenerateNamesAsync(int, string, string, string, string)
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_System_Int32_System_String_System_String_System_String_System_String_
-  commentId: M:Namer.NameGenerator.GenerateNamesAsync(System.Int32,System.String,System.String,System.String,System.String)
-  name.vb: GenerateNamesAsync(Integer, String, String, String, String)
-  fullName: Namer.NameGenerator.GenerateNamesAsync(int, string, string, string, string)
-  fullName.vb: Namer.NameGenerator.GenerateNamesAsync(Integer, String, String, String, String)
-  nameWithType: NameGenerator.GenerateNamesAsync(int, string, string, string, string)
-  nameWithType.vb: NameGenerator.GenerateNamesAsync(Integer, String, String, String, String)
+- uid: Namer.NameGenerator.GenerateNamesAsync(Namer.NameGenderType)
+  name: GenerateNamesAsync(NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateNamesAsync(Namer.NameGenderType)
+  fullName: Namer.NameGenerator.GenerateNamesAsync(Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateNamesAsync(NameGenderType)
+- uid: Namer.NameGenerator.GenerateNamesAsync(System.Int32,Namer.NameGenderType)
+  name: GenerateNamesAsync(int, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_System_Int32_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateNamesAsync(System.Int32,Namer.NameGenderType)
+  name.vb: GenerateNamesAsync(Integer, NameGenderType)
+  fullName: Namer.NameGenerator.GenerateNamesAsync(int, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.GenerateNamesAsync(Integer, Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateNamesAsync(int, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateNamesAsync(Integer, NameGenderType)
+- uid: Namer.NameGenerator.GenerateNamesAsync(System.Int32,System.String,System.String,System.String,System.String,Namer.NameGenderType)
+  name: GenerateNamesAsync(int, string, string, string, string, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_System_Int32_System_String_System_String_System_String_System_String_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.GenerateNamesAsync(System.Int32,System.String,System.String,System.String,System.String,Namer.NameGenderType)
+  name.vb: GenerateNamesAsync(Integer, String, String, String, String, NameGenderType)
+  fullName: Namer.NameGenerator.GenerateNamesAsync(int, string, string, string, string, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.GenerateNamesAsync(Integer, String, String, String, String, Namer.NameGenderType)
+  nameWithType: NameGenerator.GenerateNamesAsync(int, string, string, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.GenerateNamesAsync(Integer, String, String, String, String, NameGenderType)
 - uid: Namer.NameGenerator.GenerateNamesAsync*
   name: GenerateNamesAsync
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateNamesAsync_
@@ -199,12 +223,12 @@ references:
   isSpec: "True"
   fullName: Namer.NameGenerator.GenerateNamesAsync
   nameWithType: NameGenerator.GenerateNamesAsync
-- uid: Namer.NameGenerator.PopulateNames
-  name: PopulateNames()
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNames
-  commentId: M:Namer.NameGenerator.PopulateNames
-  fullName: Namer.NameGenerator.PopulateNames()
-  nameWithType: NameGenerator.PopulateNames()
+- uid: Namer.NameGenerator.PopulateNames(Namer.NameGenderType)
+  name: PopulateNames(NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNames_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.PopulateNames(Namer.NameGenderType)
+  fullName: Namer.NameGenerator.PopulateNames(Namer.NameGenderType)
+  nameWithType: NameGenerator.PopulateNames(NameGenderType)
 - uid: Namer.NameGenerator.PopulateNames*
   name: PopulateNames
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNames_
@@ -212,12 +236,12 @@ references:
   isSpec: "True"
   fullName: Namer.NameGenerator.PopulateNames
   nameWithType: NameGenerator.PopulateNames
-- uid: Namer.NameGenerator.PopulateNamesAsync
-  name: PopulateNamesAsync()
-  href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNamesAsync
-  commentId: M:Namer.NameGenerator.PopulateNamesAsync
-  fullName: Namer.NameGenerator.PopulateNamesAsync()
-  nameWithType: NameGenerator.PopulateNamesAsync()
+- uid: Namer.NameGenerator.PopulateNamesAsync(Namer.NameGenderType)
+  name: PopulateNamesAsync(NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNamesAsync_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.PopulateNamesAsync(Namer.NameGenderType)
+  fullName: Namer.NameGenerator.PopulateNamesAsync(Namer.NameGenderType)
+  nameWithType: NameGenerator.PopulateNamesAsync(NameGenderType)
 - uid: Namer.NameGenerator.PopulateNamesAsync*
   name: PopulateNamesAsync
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_PopulateNamesAsync_
