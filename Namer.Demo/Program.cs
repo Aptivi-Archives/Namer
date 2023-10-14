@@ -31,30 +31,37 @@ namespace Namer.Demo
     {
         static void Main()
         {
-            // Generate 10 names
-            Console.WriteLine("Generate 10 names\n");
-            var names = NameGenerator.GenerateNames();
-            Console.WriteLine("- {0}\n\n", string.Join(", ", names));
+            foreach (string genderName in Enum.GetNames(typeof(NameGenderType)))
+            {
+                // Get gender
+                var genderType = (NameGenderType)Enum.Parse(typeof(NameGenderType), genderName);
+                Console.WriteLine($"{genderName}\n");
 
-            // Generate 20 names
-            Console.WriteLine("Generate 20 names\n");
-            var names20 = NameGenerator.GenerateNames(20);
-            Console.WriteLine("- {0}\n\n", string.Join(", ", names20));
+                // Generate 10 names
+                Console.WriteLine("Generate 10 names\n");
+                var names = NameGenerator.GenerateNames(genderType);
+                Console.WriteLine("- {0}\n", string.Join(", ", names));
 
-            // Generate 5 names with custom name prefix
-            Console.WriteLine("Generate 5 names with custom name prefix\n");
-            var names5nameprefix = NameGenerator.GenerateNames(5, "J", "m", "", "");
-            Console.WriteLine("- {0}\n\n", string.Join(", ", names5nameprefix));
+                // Generate 20 names
+                Console.WriteLine("Generate 5 names\n");
+                var names5 = NameGenerator.GenerateNames(5, genderType);
+                Console.WriteLine("- {0}\n", string.Join(", ", names5));
 
-            // Generate 5 names with custom surname prefix
-            Console.WriteLine("Generate 5 names with custom surname prefix\n");
-            var names5surnameprefix = NameGenerator.GenerateNames(5, "", "", "B", "g");
-            Console.WriteLine("- {0}\n\n", string.Join(", ", names5surnameprefix));
+                // Generate 5 names with custom name prefix
+                Console.WriteLine("Generate 5 names with custom name prefix\n");
+                var names5nameprefix = NameGenerator.GenerateNames(5, "J", "m", "", "", genderType);
+                Console.WriteLine("- {0}\n", string.Join(", ", names5nameprefix));
 
-            // Generate 5 names with custom name and surname prefix
-            Console.WriteLine("Generate 5 names with custom name and surname prefix\n");
-            var namescomplete = NameGenerator.GenerateNames(5, "Ev", "n", "Na", "lo");
-            Console.WriteLine("- {0}\n\n", string.Join(", ", namescomplete));
+                // Generate 5 names with custom surname prefix
+                Console.WriteLine("Generate 5 names with custom surname prefix\n");
+                var names5surnameprefix = NameGenerator.GenerateNames(5, "", "", "B", "g", genderType);
+                Console.WriteLine("- {0}\n", string.Join(", ", names5surnameprefix));
+
+                // Generate 5 names with custom name and surname prefix
+                Console.WriteLine("Generate 5 names with custom name and surname prefix\n");
+                var namescomplete = NameGenerator.GenerateNames(5, "Ev", "n", "Na", "lo", genderType);
+                Console.WriteLine("- {0}\n", string.Join(", ", namescomplete));
+            }
         }
     }
 }

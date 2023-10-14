@@ -40,22 +40,34 @@ namespace Namer
 		internal static string[] Names = Array.Empty<string>();
 		internal static string[] Surnames = Array.Empty<string>();
 		private static readonly HttpClient NameClient = new();
-        private static readonly string nameAddress = "https://cdn.jsdelivr.net/gh/Aptivi/NamesList@latest/Processed/FirstNames.txt";
-        private static readonly string surnameAddress = "https://cdn.jsdelivr.net/gh/Aptivi/NamesList@latest/Processed/Surnames.txt";
+        private static readonly string nameAddressPart = "https://cdn.jsdelivr.net/gh/Aptivi/NamesList@latest/Processed/";
+        private static readonly string unifiedNameListFileName = "FirstNames.txt";
+        private static readonly string femaleNameListFileName = "FirstNames_Female.txt";
+        private static readonly string maleNameListFileName = "FirstNames_Male.txt";
+        private static readonly string surnameListFileName = "Surnames.txt";
 
         /// <summary>
         /// Populates the names and the surnames for the purpose of initialization
         /// </summary>
-        public static void PopulateNames() =>
-            PopulateNamesAsync().Wait();
+        /// <param name="genderType">Gender type to use when generating names</param>
+        public static void PopulateNames(NameGenderType genderType = NameGenderType.Unified) =>
+            PopulateNamesAsync(genderType).Wait();
 
         /// <summary>
         /// [Async] Populates the names and the surnames for the purpose of initialization
         /// </summary>
-        public static async Task PopulateNamesAsync()
+        /// <param name="genderType">Gender type to use when generating names</param>
+        public static async Task PopulateNamesAsync(NameGenderType genderType = NameGenderType.Unified)
         {
             try
             {
+                string surnameAddress = $"{nameAddressPart}{surnameListFileName}";
+                string namesFileName =
+                    genderType == NameGenderType.Female ? femaleNameListFileName :
+                    genderType == NameGenderType.Male ? maleNameListFileName :
+                    unifiedNameListFileName;
+                string nameAddress = $"{nameAddressPart}{namesFileName}";
+
                 if (Names.Length == 0)
                     Names = await PopulateInternalAsync(nameAddress);
                 if (Surnames.Length == 0)
@@ -70,17 +82,19 @@ namespace Namer
         /// <summary>
         /// Generates the names
         /// </summary>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static string[] GenerateNames() =>
-            GenerateNames(10, "", "", "", "");
+        public static string[] GenerateNames(NameGenderType genderType = NameGenderType.Unified) =>
+            GenerateNames(10, "", "", "", "", genderType);
 
         /// <summary>
         /// Generates the names
         /// </summary>
         /// <param name="Count">How many names to generate?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static string[] GenerateNames(int Count) =>
-            GenerateNames(Count, "", "", "", "");
+        public static string[] GenerateNames(int Count, NameGenderType genderType = NameGenderType.Unified) =>
+            GenerateNames(Count, "", "", "", "", genderType);
 
         /// <summary>
         /// Generates the names
@@ -90,28 +104,31 @@ namespace Namer
         /// <param name="NameSuffix">What should the name end with?</param>
         /// <param name="SurnamePrefix">What should the surname start with?</param>
         /// <param name="SurnameSuffix">What should the surname end with?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static string[] GenerateNames(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix)
+        public static string[] GenerateNames(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix, NameGenderType genderType = NameGenderType.Unified)
 		{
 			// Initialize names
-			PopulateNames();
+			PopulateNames(genderType);
 			return GenerateNameArray(Count, NamePrefix, NameSuffix, SurnamePrefix, SurnameSuffix);
         }
 
         /// <summary>
         /// [Async] Generates the names
         /// </summary>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static async Task<string[]> GenerateNamesAsync() =>
-            await GenerateNamesAsync(10, "", "", "", "");
+        public static async Task<string[]> GenerateNamesAsync(NameGenderType genderType = NameGenderType.Unified) =>
+            await GenerateNamesAsync(10, "", "", "", "", genderType);
 
         /// <summary>
         /// [Async] Generates the names
         /// </summary>
         /// <param name="Count">How many names to generate?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static async Task<string[]> GenerateNamesAsync(int Count) =>
-            await GenerateNamesAsync(Count, "", "", "", "");
+        public static async Task<string[]> GenerateNamesAsync(int Count, NameGenderType genderType = NameGenderType.Unified) =>
+            await GenerateNamesAsync(Count, "", "", "", "", genderType);
 
         /// <summary>
         /// [Async] Generates the names
@@ -121,28 +138,31 @@ namespace Namer
         /// <param name="NameSuffix">What should the name end with?</param>
         /// <param name="SurnamePrefix">What should the surname start with?</param>
         /// <param name="SurnameSuffix">What should the surname end with?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static async Task<string[]> GenerateNamesAsync(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix)
+        public static async Task<string[]> GenerateNamesAsync(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix, NameGenderType genderType = NameGenderType.Unified)
         {
             // Initialize names
-            await PopulateNamesAsync();
+            await PopulateNamesAsync(genderType);
             return GenerateNameArray(Count, NamePrefix, NameSuffix, SurnamePrefix, SurnameSuffix);
         }
 
         /// <summary>
         /// Generates the first names
         /// </summary>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static string[] GenerateFirstNames() =>
-            GenerateFirstNames(10, "", "");
+        public static string[] GenerateFirstNames(NameGenderType genderType = NameGenderType.Unified) =>
+            GenerateFirstNames(10, "", "", genderType);
 
         /// <summary>
         /// Generates the first names
         /// </summary>
         /// <param name="Count">How many names to generate?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static string[] GenerateFirstNames(int Count) =>
-            GenerateFirstNames(Count, "", "");
+        public static string[] GenerateFirstNames(int Count, NameGenderType genderType = NameGenderType.Unified) =>
+            GenerateFirstNames(Count, "", "", genderType);
 
         /// <summary>
         /// Generates the first names
@@ -150,28 +170,31 @@ namespace Namer
         /// <param name="Count">How many names to generate?</param>
         /// <param name="NamePrefix">What should the name start with?</param>
         /// <param name="NameSuffix">What should the name end with?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static string[] GenerateFirstNames(int Count, string NamePrefix, string NameSuffix)
+        public static string[] GenerateFirstNames(int Count, string NamePrefix, string NameSuffix, NameGenderType genderType = NameGenderType.Unified)
 		{
 			// Initialize names
-			PopulateNames();
+			PopulateNames(genderType);
 			return GenerateFirstNameArray(Count, NamePrefix, NameSuffix);
         }
 
         /// <summary>
         /// [Async] Generates the first names
         /// </summary>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static async Task<string[]> GenerateFirstNamesAsync() =>
-            await GenerateFirstNamesAsync(10, "", "");
+        public static async Task<string[]> GenerateFirstNamesAsync(NameGenderType genderType = NameGenderType.Unified) =>
+            await GenerateFirstNamesAsync(10, "", "", genderType);
 
         /// <summary>
         /// [Async] Generates the first names
         /// </summary>
         /// <param name="Count">How many names to generate?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static async Task<string[]> GenerateFirstNamesAsync(int Count) =>
-            await GenerateFirstNamesAsync(Count, "", "");
+        public static async Task<string[]> GenerateFirstNamesAsync(int Count, NameGenderType genderType = NameGenderType.Unified) =>
+            await GenerateFirstNamesAsync(Count, "", "", genderType);
 
         /// <summary>
         /// [Async] Generates the first names
@@ -179,11 +202,12 @@ namespace Namer
         /// <param name="Count">How many names to generate?</param>
         /// <param name="NamePrefix">What should the name start with?</param>
         /// <param name="NameSuffix">What should the name end with?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
         /// <returns>List of generated names</returns>
-        public static async Task<string[]> GenerateFirstNamesAsync(int Count, string NamePrefix, string NameSuffix)
+        public static async Task<string[]> GenerateFirstNamesAsync(int Count, string NamePrefix, string NameSuffix, NameGenderType genderType = NameGenderType.Unified)
         {
             // Initialize names
-            await PopulateNamesAsync();
+            await PopulateNamesAsync(genderType);
             return GenerateFirstNameArray(Count, NamePrefix, NameSuffix);
         }
 
