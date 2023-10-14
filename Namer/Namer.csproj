@@ -5,8 +5,8 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <IncludeSymbols>True</IncludeSymbols>
-    <Version>1.1.1</Version>
-    <PackageVersion>1.1.1</PackageVersion>
+    <Version>1.2.0</Version>
+    <PackageVersion>1.2.0</PackageVersion>
     <Authors>Aptivi</Authors>
     <Company>Aptivi</Company>
     <Description>Name generation tool</Description>
