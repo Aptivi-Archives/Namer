@@ -37,6 +37,106 @@ references:
   commentId: T:Namer.NameGenerator
   fullName: Namer.NameGenerator
   nameWithType: NameGenerator
+- uid: Namer.NameGenerator.FindFirstNames(System.String,Namer.NameGenderType)
+  name: FindFirstNames(string, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindFirstNames_System_String_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.FindFirstNames(System.String,Namer.NameGenderType)
+  name.vb: FindFirstNames(String, NameGenderType)
+  fullName: Namer.NameGenerator.FindFirstNames(string, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.FindFirstNames(String, Namer.NameGenderType)
+  nameWithType: NameGenerator.FindFirstNames(string, NameGenderType)
+  nameWithType.vb: NameGenerator.FindFirstNames(String, NameGenderType)
+- uid: Namer.NameGenerator.FindFirstNames(System.String,System.String,System.String,Namer.NameGenderType)
+  name: FindFirstNames(string, string, string, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindFirstNames_System_String_System_String_System_String_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.FindFirstNames(System.String,System.String,System.String,Namer.NameGenderType)
+  name.vb: FindFirstNames(String, String, String, NameGenderType)
+  fullName: Namer.NameGenerator.FindFirstNames(string, string, string, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.FindFirstNames(String, String, String, Namer.NameGenderType)
+  nameWithType: NameGenerator.FindFirstNames(string, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.FindFirstNames(String, String, String, NameGenderType)
+- uid: Namer.NameGenerator.FindFirstNames*
+  name: FindFirstNames
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindFirstNames_
+  commentId: Overload:Namer.NameGenerator.FindFirstNames
+  isSpec: "True"
+  fullName: Namer.NameGenerator.FindFirstNames
+  nameWithType: NameGenerator.FindFirstNames
+- uid: Namer.NameGenerator.FindFirstNamesAsync(System.String,Namer.NameGenderType)
+  name: FindFirstNamesAsync(string, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindFirstNamesAsync_System_String_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.FindFirstNamesAsync(System.String,Namer.NameGenderType)
+  name.vb: FindFirstNamesAsync(String, NameGenderType)
+  fullName: Namer.NameGenerator.FindFirstNamesAsync(string, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.FindFirstNamesAsync(String, Namer.NameGenderType)
+  nameWithType: NameGenerator.FindFirstNamesAsync(string, NameGenderType)
+  nameWithType.vb: NameGenerator.FindFirstNamesAsync(String, NameGenderType)
+- uid: Namer.NameGenerator.FindFirstNamesAsync(System.String,System.String,System.String,Namer.NameGenderType)
+  name: FindFirstNamesAsync(string, string, string, NameGenderType)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindFirstNamesAsync_System_String_System_String_System_String_Namer_NameGenderType_
+  commentId: M:Namer.NameGenerator.FindFirstNamesAsync(System.String,System.String,System.String,Namer.NameGenderType)
+  name.vb: FindFirstNamesAsync(String, String, String, NameGenderType)
+  fullName: Namer.NameGenerator.FindFirstNamesAsync(string, string, string, Namer.NameGenderType)
+  fullName.vb: Namer.NameGenerator.FindFirstNamesAsync(String, String, String, Namer.NameGenderType)
+  nameWithType: NameGenerator.FindFirstNamesAsync(string, string, string, NameGenderType)
+  nameWithType.vb: NameGenerator.FindFirstNamesAsync(String, String, String, NameGenderType)
+- uid: Namer.NameGenerator.FindFirstNamesAsync*
+  name: FindFirstNamesAsync
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindFirstNamesAsync_
+  commentId: Overload:Namer.NameGenerator.FindFirstNamesAsync
+  isSpec: "True"
+  fullName: Namer.NameGenerator.FindFirstNamesAsync
+  nameWithType: NameGenerator.FindFirstNamesAsync
+- uid: Namer.NameGenerator.FindLastNames(System.String)
+  name: FindLastNames(string)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindLastNames_System_String_
+  commentId: M:Namer.NameGenerator.FindLastNames(System.String)
+  name.vb: FindLastNames(String)
+  fullName: Namer.NameGenerator.FindLastNames(string)
+  fullName.vb: Namer.NameGenerator.FindLastNames(String)
+  nameWithType: NameGenerator.FindLastNames(string)
+  nameWithType.vb: NameGenerator.FindLastNames(String)
+- uid: Namer.NameGenerator.FindLastNames(System.String,System.String,System.String)
+  name: FindLastNames(string, string, string)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindLastNames_System_String_System_String_System_String_
+  commentId: M:Namer.NameGenerator.FindLastNames(System.String,System.String,System.String)
+  name.vb: FindLastNames(String, String, String)
+  fullName: Namer.NameGenerator.FindLastNames(string, string, string)
+  fullName.vb: Namer.NameGenerator.FindLastNames(String, String, String)
+  nameWithType: NameGenerator.FindLastNames(string, string, string)
+  nameWithType.vb: NameGenerator.FindLastNames(String, String, String)
+- uid: Namer.NameGenerator.FindLastNames*
+  name: FindLastNames
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindLastNames_
+  commentId: Overload:Namer.NameGenerator.FindLastNames
+  isSpec: "True"
+  fullName: Namer.NameGenerator.FindLastNames
+  nameWithType: NameGenerator.FindLastNames
+- uid: Namer.NameGenerator.FindLastNamesAsync(System.String)
+  name: FindLastNamesAsync(string)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindLastNamesAsync_System_String_
+  commentId: M:Namer.NameGenerator.FindLastNamesAsync(System.String)
+  name.vb: FindLastNamesAsync(String)
+  fullName: Namer.NameGenerator.FindLastNamesAsync(string)
+  fullName.vb: Namer.NameGenerator.FindLastNamesAsync(String)
+  nameWithType: NameGenerator.FindLastNamesAsync(string)
+  nameWithType.vb: NameGenerator.FindLastNamesAsync(String)
+- uid: Namer.NameGenerator.FindLastNamesAsync(System.String,System.String,System.String)
+  name: FindLastNamesAsync(string, string, string)
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindLastNamesAsync_System_String_System_String_System_String_
+  commentId: M:Namer.NameGenerator.FindLastNamesAsync(System.String,System.String,System.String)
+  name.vb: FindLastNamesAsync(String, String, String)
+  fullName: Namer.NameGenerator.FindLastNamesAsync(string, string, string)
+  fullName.vb: Namer.NameGenerator.FindLastNamesAsync(String, String, String)
+  nameWithType: NameGenerator.FindLastNamesAsync(string, string, string)
+  nameWithType.vb: NameGenerator.FindLastNamesAsync(String, String, String)
+- uid: Namer.NameGenerator.FindLastNamesAsync*
+  name: FindLastNamesAsync
+  href: api/Namer.NameGenerator.html#Namer_NameGenerator_FindLastNamesAsync_
+  commentId: Overload:Namer.NameGenerator.FindLastNamesAsync
+  isSpec: "True"
+  fullName: Namer.NameGenerator.FindLastNamesAsync
+  nameWithType: NameGenerator.FindLastNamesAsync
 - uid: Namer.NameGenerator.GenerateFirstNames(Namer.NameGenderType)
   name: GenerateFirstNames(NameGenderType)
   href: api/Namer.NameGenerator.html#Namer_NameGenerator_GenerateFirstNames_Namer_NameGenderType_
