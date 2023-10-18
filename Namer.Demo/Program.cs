@@ -61,6 +61,11 @@ namespace Namer.Demo
                 Console.WriteLine("Generate 5 names with custom name and surname prefix\n");
                 var namescomplete = NameGenerator.GenerateNames(5, "Ev", "n", "Na", "lo", genderType);
                 Console.WriteLine("- {0}\n", string.Join(", ", namescomplete));
+
+                // Find first names
+                Console.WriteLine("Find first names\n");
+                var findnames = NameGenerator.FindFirstNames("Mic", "", "", genderType);
+                Console.WriteLine("- {0}\n", string.Join(", ", findnames));
             }
         }
     }

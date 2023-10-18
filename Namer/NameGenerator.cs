@@ -271,6 +271,98 @@ namespace Namer
             return GenerateLastNameArray(Count, SurnamePrefix, SurnameSuffix);
         }
 
+        /// <summary>
+        /// Generates the first names
+        /// </summary>
+        /// <param name="nameSearchTerm">Search term for the name</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
+        /// <returns>List of generated names</returns>
+        public static string[] FindFirstNames(string nameSearchTerm, NameGenderType genderType = NameGenderType.Unified) =>
+            FindFirstNames(nameSearchTerm, "", "", genderType);
+
+        /// <summary>
+        /// Generates the first names
+        /// </summary>
+        /// <param name="nameSearchTerm">Search term for the name</param>
+        /// <param name="NamePrefix">What should the name start with?</param>
+        /// <param name="NameSuffix">What should the name end with?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
+        /// <returns>List of generated names</returns>
+        public static string[] FindFirstNames(string nameSearchTerm, string NamePrefix, string NameSuffix, NameGenderType genderType = NameGenderType.Unified)
+		{
+			// Initialize names
+			PopulateNames(genderType);
+			return GenerateFirstNameArray(nameSearchTerm, NamePrefix, NameSuffix);
+        }
+
+        /// <summary>
+        /// [Async] Generates the first names
+        /// </summary>
+        /// <param name="nameSearchTerm">Search term for the name</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
+        /// <returns>List of generated names</returns>
+        public static async Task<string[]> FindFirstNamesAsync(string nameSearchTerm, NameGenderType genderType = NameGenderType.Unified) =>
+            await FindFirstNamesAsync(nameSearchTerm, "", "", genderType);
+
+        /// <summary>
+        /// [Async] Generates the first names
+        /// </summary>
+        /// <param name="nameSearchTerm">Search term for the name</param>
+        /// <param name="NamePrefix">What should the name start with?</param>
+        /// <param name="NameSuffix">What should the name end with?</param>
+        /// <param name="genderType">Gender type to use when generating names</param>
+        /// <returns>List of generated names</returns>
+        public static async Task<string[]> FindFirstNamesAsync(string nameSearchTerm, string NamePrefix, string NameSuffix, NameGenderType genderType = NameGenderType.Unified)
+        {
+            // Initialize names
+            await PopulateNamesAsync(genderType);
+            return GenerateFirstNameArray(nameSearchTerm, NamePrefix, NameSuffix);
+        }
+
+        /// <summary>
+        /// Generates the last names
+        /// </summary>
+        /// <param name="nameSearchTerm">Search term for the name</param>
+        /// <returns>List of generated names</returns>
+        public static string[] FindLastNames(string nameSearchTerm) =>
+            FindLastNames(nameSearchTerm, "", "");
+
+        /// <summary>
+        /// Generates the last names
+        /// </summary>
+        /// <param name="nameSearchTerm">Search term for the name</param>
+        /// <param name="SurnamePrefix">What should the surname start with?</param>
+        /// <param name="SurnameSuffix">What should the surname end with?</param>
+        /// <returns>List of generated names</returns>
+        public static string[] FindLastNames(string nameSearchTerm, string SurnamePrefix, string SurnameSuffix)
+        {
+            // Initialize names
+            PopulateNames();
+            return GenerateLastNameArray(nameSearchTerm, SurnamePrefix, SurnameSuffix);
+        }
+
+        /// <summary>
+        /// [Async] Generates the last names
+        /// </summary>
+        /// <param name="nameSearchTerm">Search term for the name</param>
+        /// <returns>List of generated names</returns>
+        public static async Task<string[]> FindLastNamesAsync(string nameSearchTerm) =>
+            await FindLastNamesAsync(nameSearchTerm, "", "");
+
+        /// <summary>
+        /// [Async] Generates the last names
+        /// </summary>
+        /// <param name="nameSearchTerm">Search term for the name</param>
+        /// <param name="SurnamePrefix">What should the surname start with?</param>
+        /// <param name="SurnameSuffix">What should the surname end with?</param>
+        /// <returns>List of generated names</returns>
+        public static async Task<string[]> FindLastNamesAsync(string nameSearchTerm, string SurnamePrefix, string SurnameSuffix)
+        {
+            // Initialize names
+            await PopulateNamesAsync();
+            return GenerateLastNameArray(nameSearchTerm, SurnamePrefix, SurnameSuffix);
+        }
+
         internal static string[] GenerateFirstNameArray(int Count, string NamePrefix, string NameSuffix)
         {
             var random = new Random();
@@ -333,6 +425,58 @@ namespace Namer
                 surnamesList.Add(GeneratedSurname);
             }
             return surnamesList.ToArray();
+        }
+
+        internal static string[] GenerateFirstNameArray(string nameSearchTerm, string NamePrefix, string NameSuffix)
+        {
+            var random = new Random();
+			List<string> namesList = new();
+
+            // Check if the prefix and suffix check is required
+            bool NamePrefixCheckRequired = !string.IsNullOrEmpty(NamePrefix);
+            bool NameSuffixCheckRequired = !string.IsNullOrEmpty(NameSuffix);
+
+            // Process the names according to suffix and/or prefix check requirement
+            string[] ProcessedNames = Names;
+            if (NamePrefixCheckRequired && NameSuffixCheckRequired)
+                ProcessedNames = Names.Where((str) => str.StartsWith(NamePrefix) && str.EndsWith(NameSuffix)).ToArray();
+            else if (NamePrefixCheckRequired)
+                ProcessedNames = Names.Where((str) => str.StartsWith(NamePrefix)).ToArray();
+            else if (NameSuffixCheckRequired)
+                ProcessedNames = Names.Where((str) => str.EndsWith(NameSuffix)).ToArray();
+            ProcessedNames = ProcessedNames.Where(str => str.Contains(nameSearchTerm)).ToArray();
+
+            // Check the names
+            if (ProcessedNames.Length == 0)
+                throw new Exception("The names are not found! Please ensure that the name conditions are correct.");
+
+            return ProcessedNames;
+        }
+
+        internal static string[] GenerateLastNameArray(string nameSearchTerm, string SurnamePrefix, string SurnameSuffix)
+        {
+            var random = new Random();
+			List<string> surnamesList = new();
+
+            // Check if the prefix and suffix check is required
+            bool SurnamePrefixCheckRequired = !string.IsNullOrEmpty(SurnamePrefix);
+            bool SurnameSuffixCheckRequired = !string.IsNullOrEmpty(SurnameSuffix);
+
+            // Process the surnames according to suffix and/or prefix check requirement
+            string[] ProcessedSurnames = Surnames;
+            if (SurnamePrefixCheckRequired && SurnameSuffixCheckRequired)
+                ProcessedSurnames = Surnames.Where((str) => str.StartsWith(SurnamePrefix) && str.EndsWith(SurnameSuffix)).ToArray();
+            else if (SurnamePrefixCheckRequired)
+                ProcessedSurnames = Surnames.Where((str) => str.StartsWith(SurnamePrefix)).ToArray();
+            else if (SurnameSuffixCheckRequired)
+                ProcessedSurnames = Surnames.Where((str) => str.EndsWith(SurnameSuffix)).ToArray();
+            ProcessedSurnames = ProcessedSurnames.Where(str => str.Contains(nameSearchTerm)).ToArray();
+
+            // Check the surnames
+            if (ProcessedSurnames.Length == 0)
+                throw new Exception("The surnames are not found! Please ensure that the surname conditions are correct.");
+
+            return ProcessedSurnames;
         }
 
         internal static string[] GenerateNameArray(int Count, string NamePrefix, string NameSuffix, string SurnamePrefix, string SurnameSuffix)
